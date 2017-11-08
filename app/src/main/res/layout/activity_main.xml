@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.demoapp.keane.demoaggtimeapp2.MainActivity">
+
+    <SeekBar
+        android:id="@+id/myTimeSeekBar"
+        android:layout_width="350dp"
+        android:layout_height="42dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/myTimeImageView"
+        android:layout_width="335dp"
+        android:layout_height="422dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitEnd"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTimeSeekBar"
+        app:srcCompat="@drawable/egg" />
+
+    <TextView
+        android:id="@+id/myTimeTextView"
+        android:layout_width="190dp"
+        android:layout_height="80dp"
+        android:text="00:30"
+        android:textSize="70sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="117dp"
+        android:layout_marginTop="157dp"
+        app:layout_constraintTop_toBottomOf="@+id/myTimeSeekBar" />
+
+    <Button
+        android:id="@+id/myTimeButton"
+        android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="122dp"
+        android:layout_marginTop="267dp"
+        android:onClick="controlTimer"
+        android:text="Go!!"
+        android:textSize="36sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTimeSeekBar" />
+
+</android.support.constraint.ConstraintLayout>
