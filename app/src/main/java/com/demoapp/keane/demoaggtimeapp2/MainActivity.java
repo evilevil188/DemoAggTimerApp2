@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private SeekBar mySeekbar;
     private Button myButton;
     private TextView myTextVies; //= (TextView)findViewById(R.id.myTimeTextView);
-    private StringBuilder sb = new StringBuilder(10);
+    private StringBuilder timerStr = new StringBuilder(10);
     private boolean counterIsActive = false;
     private CountDownTimer countDownTimer;
 
@@ -23,19 +23,19 @@ public class MainActivity extends AppCompatActivity {
     public void updateTimer(int secondLeft) {
         int minutes = secondLeft / 60;
         int seconds = secondLeft - minutes * 60;
-        sb.append(minutes).append(":");
+        timerStr.append(minutes).append(":");
         String ss = Integer.toString(seconds);
 
         //避免發生00:9  6:7  ==>00:09 6:07
         if (seconds <= 9) {
 //            ss = "0" + ss;
-            sb.append("0").append(seconds);
+            timerStr.append("0").append(seconds);
         }else {
-            sb.append(seconds);
+            timerStr.append(seconds);
         }
 //        myTextVies.setText(Integer.toString(minutes) + ":" + ss);
-        myTextVies.setText(sb.toString());  //改變顯示文字
-        sb.setLength(0);    //重置StringBuilder
+        myTextVies.setText(timerStr.toString());  //改變顯示文字
+        timerStr.setLength(0);    //重置StringBuilder
     }
 
     //重置計時器
